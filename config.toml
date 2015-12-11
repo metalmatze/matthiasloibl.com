@@ -1,3 +1,4 @@
 baseurl = "https://matthiasloibl.com/"
 languageCode = "en-US"
 title = "matthiasloibl.com"
+theme = "material-design-lite"
