@@ -1,0 +1,28 @@
+@import "../../node_modules/material-design-lite/src/material-design-lite.scss";
+
+.page-content {
+  margin: 0 auto;
+  padding: 16px;
+
+  @media screen and (min-width: 760px) {
+    width: 700px;
+  }
+}
+
+section.hero {
+  display: flex;
+  height: calc(80vh - 100px);
+  background-color: unquote("rgb(#{$color-primary})");
+  color: white;
+
+  .content {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.hugo-mdl {
+  .mdl-layout__header {
+    position: fixed;
+  }
+}
