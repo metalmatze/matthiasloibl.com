@@ -1,0 +1,12 @@
+name = "Material Lite"
+license = "MIT"
+licenselink = "LICENSE.md"
+description = ""
+homepage = "http://siteforthistheme.com/"
+tags = ["", ""]
+features = ["", ""]
+min_version = 0.15
+
+[author]
+  name = "Matthias Loibl <mail@matthiasloibl.com>"
+  homepage = "https://matthiasloibl.com"
