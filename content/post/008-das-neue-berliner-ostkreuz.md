@@ -21,4 +21,3 @@ Dennoch sieht man noch deutlich, dass die Bauarbeiten andauern werden, bis es ko
 ![](/post/8/ostkreuz2.jpg)
 
 ![](/post/8/ostkreuz3.jpg)
-
