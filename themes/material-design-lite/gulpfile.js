@@ -1,0 +1,44 @@
+var gulp = require('gulp');
+var minifyCss = require('gulp-minify-css');
+var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+
+gulp.task('default', [
+    'js',
+    'css',
+    'copy'
+]);
+
+gulp.task('build', [
+    'minify'
+]);
+
+gulp.task('watch', ['default'], function () {
+    gulp.watch('assets/**/*.js', ['js']);
+    gulp.watch('assets/**/*.scss', ['css']);
+});
+
+gulp.task('js', function () {
+});
+
+gulp.task('css', function () {
+    gulp.src('assets/scss/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./static/css'));
+});
+
+gulp.task('minify', ['default'], function () {
+    //gulp.src('static/app.js')
+    //    .pipe(uglify())
+    //    .pipe(gulp.dest('static'));
+    gulp.src('static/css/main.css')
+        .pipe(minifyCss())
+        .pipe(gulp.dest('static/css'));
+});
+
+gulp.task('copy', function () {
+    gulp.src('node_modules/material-design-lite/material.min.js')
+        .pipe(gulp.dest('static/js'));
+    //gulp.src('node_modules/material-design-icons/iconfont/*')
+    //    .pipe(gulp.dest('static/fonts'))
+});
