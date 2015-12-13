@@ -7,7 +7,7 @@ slug = "git-push-all-branches"
 If you use git branches a lot, you'll often push each branch after each commit.
 
 This takes time...  
-
+<!--more-->
 Instead of pushing every single branch you can do `git push --all origin`.  
 This will push all commits of all branches to origin. That really simple!
 

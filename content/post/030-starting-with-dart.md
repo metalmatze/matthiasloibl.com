@@ -7,7 +7,7 @@ slug = "starting-with-dart"
 I just stumbled across [dart](https://www.dartlang.org) again.  
 It really got me interested and I started digging into resources.  
 Here's what I've found so far.
-
+<!--more-->
 *I'll add more as far as it helps me.*
 
 ### Websites

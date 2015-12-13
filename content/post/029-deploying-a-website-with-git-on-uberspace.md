@@ -9,7 +9,7 @@ Are you using git yet? Are you deploying your website via `git push`? - You **sh
 The goal of this post is to give you a short overview of my way to get git automatically deploy a website via `git push` on [uberspace.de](https://uberspace.de/).
 
 > I will use [*metalmatze.de*](http://metalmatze.de) as domain and *metalmatze* as examples (my site is not hosted on uberspace).
-
+<!--more-->
 ---
 
 ### What we want to do
