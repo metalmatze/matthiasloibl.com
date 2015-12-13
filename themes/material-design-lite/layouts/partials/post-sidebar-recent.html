@@ -1,0 +1,6 @@
+<h4>Recent Posts</h4>
+{{ range first 5 .Data.Pages }}
+<a href="{{.Permalink}}">{{ .Title }}</a><br>
+<small>{{ dateFormat "January 2, 2006" .Date }}</small>
+<hr>
+{{ end }}

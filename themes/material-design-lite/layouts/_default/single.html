@@ -1,14 +1,23 @@
 {{ partial "header.html" . }}
 
-<section class="hero">
-    <div class="content">
-        <h1>{{ .Title }}</h1>
-        <p>{{ dateFormat "January 2, 2006" .Date }}</p>
-    </div>
-</section>
+<div class="layout-single">
+    {{ if isset .Params "image" }}
+    <section class="hero" style="background-image: url('{{.Site.BaseURL}}{{index .Params "image"}}')">
+    {{ else }}
+    <section class="hero">
+    {{ end }}
+        <div class="content">
+            <h1>{{ .Title }}</h1>
 
-<div class="page-content">
-    {{ .Content }}
+            <p>{{ dateFormat "January 2, 2006" .Date }}</p>
+        </div>
+    </section>
+
+    <div class="mdl-grid content">
+        <div class="mdl-cell mdl-cell--12-col">
+            {{ .Content }}
+        </div>
+    </div>
 </div>
 
 {{ partial "footer.html" . }}
