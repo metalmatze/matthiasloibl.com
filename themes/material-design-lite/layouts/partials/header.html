@@ -3,13 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{.Site.Title}}</title>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+    {{ .Hugo.Generator }}
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,300,500,700|Roboto+Mono"
+          type="text/css">
 </head>
 <body class="hugo-mdl">
 
