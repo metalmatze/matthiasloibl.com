@@ -1,4 +1,6 @@
-@import "../../node_modules/material-design-lite/src/material-design-lite.scss";
+@import "../../node_modules/material-design-lite/src/color-definitions";
+@import "variables";
+@import "../../node_modules/material-design-lite/src/material-design-lite";
 
 .page-content {
   margin: 0 auto;
@@ -26,3 +28,4 @@ section.hero {
     position: fixed;
   }
 }
+@import "overrides";
