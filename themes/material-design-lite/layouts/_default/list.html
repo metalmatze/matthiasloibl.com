@@ -1,15 +1,17 @@
 {{ partial "header.html" . }}
 
+{{ $paginator := .Paginator }}
+
 <div class="layout-list">
     <section class="hero">
         <div class="content">
             <h1>{{ .Title }}</h1>
         </div>
-    </section>
+     </section>
 
     <div class="mdl-grid content">
         <div class="mdl-cell mdl-cell--8-col">
-            {{ range first 10 .Data.Pages }}
+            {{ range $index, $page := $paginator.Pages }}
             <div class="mdl-cell mdl-cell--12-col">
                 {{ partial "post-card.html" . }}
             </div>
@@ -18,7 +20,12 @@
         <div class="mdl-cell mdl-cell--4-col">
             {{ partial "post-sidebar-recent.html" . }}
         </div>
+
+        <div class="mdl-cell mdl-cell--8-col">
+            {{ partial "pagination.html" $paginator }}
+        </div>
     </div>
 </div>
+
 
 {{ partial "footer.html" . }}
