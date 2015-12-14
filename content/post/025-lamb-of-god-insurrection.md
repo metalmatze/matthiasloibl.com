@@ -5,4 +5,6 @@ slug = "lamb-of-god-insurrection"
 draft = true
 +++
 
-<iframe width="100%" height="400" src="//www.youtube.com/embed/_3eks8cGPDA" frameborder="0" allowfullscreen></iframe>
+<div class="youtube">
+    <iframe width="100%" height="400" src="//www.youtube.com/embed/_3eks8cGPDA" frameborder="0" allowfullscreen></iframe>
+</div>

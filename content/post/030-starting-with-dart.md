@@ -17,12 +17,17 @@ Here's what I've found so far.
 
 ### Videos
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/5KlnlCq2M5Q" frameborder="0" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/vT1KmTQ-1Os" frameborder="0" allowfullscreen></iframe>
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/FqsU3TbUw_s" frameborder="0" allowfullscreen></iframe>
-
+<div class="youtube">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/5KlnlCq2M5Q" frameborder="0" allowfullscreen></iframe>
+</div>
+<br>
+<div class="youtube">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/vT1KmTQ-1Os" frameborder="0" allowfullscreen></iframe>
+</div>
+<br>
+<div class="youtube">
+    <iframe width="560" height="315" src="//www.youtube.com/embed/FqsU3TbUw_s" frameborder="0" allowfullscreen></iframe>
+</div>
 
 After you got an overview, maybe you want to dig deeper into dart. Try these quick video tutorials.  
 [https://www.dartlang.org/dart-tips](https://www.dartlang.org/dart-tips)
