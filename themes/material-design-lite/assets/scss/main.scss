@@ -30,8 +30,8 @@
   height: calc(80vh - 100px);
   align-items: center;
   justify-content: center;
-  background-size: cover;
   background: unquote("rgb(#{$color-primary})") center;
+  background-size: cover;
   color: white;
 
   h1, h2, h3, h4, h5, h6 {
@@ -80,10 +80,8 @@
     .mdl-card__title-background {
       height: 176px;
       color: white;
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
       background-position: center;
       background-size: cover;
-
 
       .mdl-card__title-text {
         color: white;
