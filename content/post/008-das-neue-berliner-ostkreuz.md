@@ -2,6 +2,7 @@
 date = "2012-04-16"
 title = "Das neue Berliner Ostkreuz"
 slug = "das-neue-berliner-ostkreuz"
+cover = "post/8/ostkreuz.jpg"
 +++
 
 ![](/post/8/ostkreuz.jpg)
