@@ -1,0 +1,21 @@
+<nav class="pagination mdl-grid" role="navigation" style="text-align: center">
+    <div class="mdl-cell">
+        {{if .HasNext}}
+        <a class="mdl-button mdl-js-button mdl-button--accent" href="{{ .Next.URL }}" style="float: left;">
+            <i class="material-icons">navigate_before</i>
+            Older Posts
+        </a>
+        {{end}}
+    </div>
+    <div class="mdl-cell">
+        <div style="margin-top: 8px;">Page {{ .PageNumber }} of {{.TotalPages}}</div>
+    </div>
+    <div class="mdl-cell">
+        {{if .HasPrev}}
+        <a class="mdl-button mdl-js-button mdl-button--accent" href="{{ .Prev.URL }}" style="float: right;">
+            Newer Posts
+            <i class="material-icons">navigate_next</i>
+        </a>
+        {{end}}
+    </div>
+</nav>
