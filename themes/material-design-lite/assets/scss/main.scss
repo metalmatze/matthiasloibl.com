@@ -3,20 +3,19 @@
 @import "../../node_modules/material-design-lite/src/material-design-lite";
 
 .hugo-mdl {
-  .content {
+  .container {
     margin: 0 auto;
   }
 
-  .layout-list {
-    .content {
-      @media(min-width: $grid-desktop-breakpoint) {
-        width: 70%;
-        max-width: 1200px;
-      }
+  .container {
+    @media(min-width: $grid-desktop-breakpoint) {
+      width: 70%;
+      max-width: 1200px;
     }
   }
+
   .layout-single {
-    .content {
+    .container {
       @media(min-width: $grid-desktop-breakpoint) {
         width: 700px;
         margin: 120px auto;
@@ -112,3 +111,4 @@
 }
 
 @import "overrides";
+@import "about";
