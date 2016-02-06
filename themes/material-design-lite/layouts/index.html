@@ -1,10 +1,24 @@
 {{ partial "header.html" . }}
-<div style="margin-top: 56px;"></div>
 
-<section id="about" class="about">
-    <div class="container">
-        <div class="mdl-grid">
-            <img src="http://0.gravatar.com/avatar/088e4fb4456157399d147c276c22d14a?s=450&d=mm" class="about-avatar"/>
+<div class="homepage">
+    <section id="home" class="home hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <h2 class="home-title">Hi! I'm <span>Matthias Loibl</span></h2>
+            <h4 class="home-subtitle">Software Craftsman from Berlin, Germany</h4>
+            <!--<a class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect mdl-button&#45;&#45;accent button-hireme"-->
+            <!--href="#contact">-->
+            <!--<i class="material-icons">send</i>Hire me-->
+            <!--</a>-->
+            <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect button-more" href="#about">
+                <i class="material-icons">expand_more</i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container mdl-grid">
+            <img src="http://0.gravatar.com/avatar/915d80f0d9b6678fad4d1ab36dfc8960?s=450&d=mm" class="avatar"/>
 
             <div class="mdl-cell mdl-cell--12-col-phone mdl-cell--4-col-tablet mdl-cell--4-desktop">
                 <div class="about-story">
@@ -42,10 +56,122 @@
                     <div><span>Email:</span>mail@matthiasloibl.com</div>
                     <div><span>City:</span>Berlin, Germany</div>
                 </div>
-                <!--@include('_social')-->
+                {{ partial "social.html" . }}
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <div class="color-primary">
+            <div class="container">
+                <h2>Portfolio</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mdl-grid">
+                <div class="mdl-cell">
+                    <a href="https://play.google.com/store/apps/details?id=de.metalmatze.krautreporter" target="_blank">
+                        <img src="/portfolio/krautreporter.png" alt="">
+                    </a>
+                </div>
+                <div class="mdl-cell">
+                    <a href="http://audio-machinery.com" target="_blank">
+                        <img src="/portfolio/audio-machinery.com.png" alt="">
+                    </a>
+                </div>
+                <div class="mdl-cell">
+                    <a href="http://protoolspeople.com" target="_blank">
+                        <img src="/portfolio/protoolspeople.com.png" alt="">
+                    </a>
+                </div>
+                <div class="mdl-cell">
+                    <a href="http://nicobrockel.com" target="_blank">
+                        <img src="/portfolio/nicobrockel.com.png" alt="">
+                    </a>
+                </div>
+                <div class="mdl-cell">
+                    <a href="http://pohlmanncreatives.com" target="_blank">
+                        <img src="/portfolio/pohlmanncreatives.com.png" alt="">
+                    </a>
+                </div>
+                <div class="mdl-cell">
+                    <a href="http://marienstein-obernkirchen.de" target="_blank">
+                        <img src="/portfolio/marienstein-obernkirchen.de.png" alt="">
+                    </a>
+                </div>
+                <div class="mdl-cell">
+                    <a href="http://praxismueller.net" target="_blank">
+                        <img src="/portfolio/praxismueller.net.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<section id="tweets" class="tweets color-primary">-->
+        <!--<div class="container">-->
+            <!--<h2>Tweets</h2>-->
+
+            <!--<div class="demo-card-square mdl-card mdl-shadow&#45;&#45;2dp">-->
+                <!--<div class="mdl-card__supporting-text">-->
+                    <!--@Heimeshoff @mathiasverraes Thank you!-->
+                <!--</div>-->
+                <!--<div class="mdl-card__actions mdl-card&#45;&#45;border">-->
+                    <!--<a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect">-->
+                        <!--View Updates-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<br><br>-->
+
+            <!--<a class="mdl-button mdl-js-button mdl-button&#45;&#45;raised mdl-js-ripple-effect">-->
+                <!--See more-->
+            <!--</a>-->
+        <!--</div>-->
+    <!--</section>-->
+
+    <section class="posts" id="posts">
+        <div class="container">
+            <h2>Posts</h2>
+
+            <div class="mdl-grid" style="padding: 0;margin: -8px;">
+                {{ range first 3 .Data.Pages }}
+                <div class="mdl-cell mdl-cell--4-col">
+                    {{ partial "post-card.html" . }}
+                </div>
+                {{ end }}
+            </div>
+
+            <br><br>
+
+            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" href="/posts">
+                See more
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact color-primary">
+        <div class="container">
+            <h2>Contact</h2>
+
+            <p>Beusselstraße, Berlin Germany</p>
+            <ul>
+                <li>
+                    <a href="http://matthiasloibl.com">matthiasloibl.com</a>
+                </li>
+                <li>
+                    <a href="mailto:mail@matthiasloibl.com">mail@matthiasloibl.com</a>
+                </li>
+                <li>+49 151 70114766</li>
+            </ul>
+
+            <br/><br/><br/>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9707.79887601026!2d13.3288448!3d52.5343439!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x411800f538fabc7!2sBerlin+Beusselstra%C3%9Fe!5e0!3m2!1sde!2sde!4v1454781872039"
+                    frameborder="0" allowfullscreen class="maps"></iframe>
+        </div>
+    </section>
+</div>
 
 {{ partial "footer.html" . }}

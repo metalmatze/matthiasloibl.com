@@ -1,0 +1,53 @@
+.homepage section.home {
+  @extend .color-primary;
+  position: relative;
+  text-align: center;
+
+  .particles {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+
+  @media(min-width: $grid-desktop-breakpoint) {
+    h2 {
+      font-size: 45px;
+    }
+    h4 {
+      font-size: 24px;
+    }
+  }
+
+  .button-hireme {
+    padding: 8px 16px;
+    i {
+      margin-right: 8px;
+    }
+
+    @media(min-width: $grid-desktop-breakpoint) {
+      padding: 16px 32px;
+      i {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .button-more {
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    margin-left: -27px;
+    background-color: white;
+    z-index: 1000;
+  }
+}
