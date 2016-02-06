@@ -9,33 +9,30 @@
     <!--<link rel="apple-touch-icon" href="apple-touch-icon.png">-->
     {{ .Hugo.Generator }}
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/main.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,300,500,700|Roboto+Mono"
-          type="text/css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="//fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,300,500,700|Roboto+Mono">
 </head>
-<body class="hugo-mdl">
+<body>
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">{{.Site.Title}}</span>
+            <a href="/">
+                <span class="mdl-layout-title">{{.Site.Title}}</span>
+            </a>
 
             <div class="mdl-layout-spacer"></div>
             <nav class="mdl-navigation mdl-layout--large-screen-only">
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
-                <a class="mdl-navigation__link" href="">Link</a>
+                {{ partial "navigation.html" . }}
             </nav>
         </div>
     </header>
     <div class="mdl-layout__drawer">
         <span class="mdl-layout-title">{{.Site.Title}}</span>
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
-            <a class="mdl-navigation__link" href="">Link</a>
+            {{ partial "navigation.html" . }}
         </nav>
     </div>
     <main class="mdl-layout__content">

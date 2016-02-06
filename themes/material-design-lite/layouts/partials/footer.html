@@ -11,5 +11,35 @@
 </div>
 
 <script src="{{.Site.BaseURL}}js/material.min.js"></script>
+<script src="{{.Site.BaseURL}}js/mobile-detect.min.js"></script>
+<script>
+    // Particles
+    var md = new MobileDetect(window.navigator.userAgent);
+    var particlesElem = document.querySelector("#particles")
+    if (md.mobile() == null && particlesElem != null) {
+        var element = document.createElement('script');
+        element.src = "{{.Site.BaseURL}}js/particles.js";
+        document.body.appendChild(element);
+
+        particlesElem.style.display = 'block'
+    }
+
+    // Header Transparency
+    var header = document.querySelector(".mdl-layout__header");
+    var content = document.querySelector("main.mdl-layout__content");
+    content.onscroll = function (event) {
+        setHeaderTransparent(content.scrollTop < 50);
+    };
+
+    var setHeaderTransparent = function (isTransparent) {
+        if (isTransparent) {
+            header.classList.add('mdl-layout__header--transparent');
+        } else {
+            header.classList.remove('mdl-layout__header--transparent');
+        }
+    };
+
+    setHeaderTransparent(true);
+</script>
 </body>
 </html>

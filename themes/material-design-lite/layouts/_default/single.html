@@ -6,14 +6,14 @@
     {{ else }}
     <section class="hero mdl-grid">
     {{ end }}
-        <div class="content">
+        <div class="container">
             <h1>{{ .Title }}</h1>
 
             <p>{{ dateFormat "January 2, 2006" .Date }}</p>
         </div>
     </section>
 
-    <div class="mdl-grid content">
+    <div class="mdl-grid container">
         <div class="mdl-cell mdl-cell--12-col">
             {{ .Content }}
         </div>

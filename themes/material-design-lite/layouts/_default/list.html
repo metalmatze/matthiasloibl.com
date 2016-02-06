@@ -4,12 +4,12 @@
 
 <div class="layout-list">
     <section class="hero">
-        <div class="content">
+        <div class="container">
             <h1>{{ .Title }}</h1>
         </div>
      </section>
 
-    <div class="mdl-grid content">
+    <div class="mdl-grid container">
         <div class="mdl-cell mdl-cell--8-col">
             {{ range $index, $page := $paginator.Pages }}
             <div class="mdl-cell mdl-cell--12-col">
@@ -26,6 +26,5 @@
         </div>
     </div>
 </div>
-
 
 {{ partial "footer.html" . }}

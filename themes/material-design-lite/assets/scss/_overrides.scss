@@ -1,18 +1,27 @@
-.hugo-mdl {
-  .mdl-layout__header {
-    position: fixed;
+.mdl-layout__header {
+  position: fixed;
+
+  @media(min-width: $grid-desktop-breakpoint) {
+    //&.mdl-layout__header--transparent {
+    //  background: transparent;
+    //  box-shadow: none;
+    //}
   }
 
-  .mdl-layout__header.transparent {
-    //background: transparent;
-    box-shadow: none;
+  .mdl-layout-title {
+    color: white;
   }
+}
 
-  a {
-    text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  @extend .mdl-typography--font-light;
+}
 
-    &:hover {
-      color: $text-link-color-hover;
-    }
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: $text-link-color-hover;
   }
 }
