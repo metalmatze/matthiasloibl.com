@@ -1,0 +1,16 @@
+.social {
+  a {
+    margin-right: 5px;
+    background-color: white;
+    color: unquote("rgb(#{$color-primary})");
+
+    &:hover {
+      color: unquote("rgb(#{$color-accent})");
+    }
+
+    i {
+      margin-top: 12px;
+      font-size: .7em;
+    }
+  }
+}
