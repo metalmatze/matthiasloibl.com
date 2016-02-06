@@ -1,0 +1,23 @@
+footer {
+  background-color: white;
+  position: relative;
+
+  .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .legal-notice {
+    float: right;
+    margin-top: 10px;
+  }
+
+  .mdl-button.top {
+    position: absolute;
+    top: -28px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+}
