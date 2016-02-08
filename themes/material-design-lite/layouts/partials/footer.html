@@ -1,11 +1,17 @@
 <footer>
     <div class="container">
-        <a class="legal-notice" href="/legal-notice">legal notice</a>
-        {{ partial "social.html" . }}
-        <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect top" href="#top">
-            <i class="material-icons">keyboard_arrow_up</i>
-        </a>
+        <div class="mdl-grid">
+            <div class="mdl-cell--6-col">
+                {{ partial "social.html" . }}
+            </div>
+            <div class="mdl-cell--6-col">
+                <a class="legal-notice" href="/legal-notice">legal notice</a>
+            </div>
+        </div>
     </div>
+    <a class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect top" href="#top">
+        <i class="material-icons">keyboard_arrow_up</i>
+    </a>
 </footer>
 </main>
 </div>

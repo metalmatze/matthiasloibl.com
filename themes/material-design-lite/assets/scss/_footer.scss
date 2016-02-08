@@ -8,8 +8,10 @@ footer {
   }
 
   .legal-notice {
-    float: right;
     margin-top: 10px;
+    @media(min-width: $grid-desktop-breakpoint) {
+      float: right;
+    }
   }
 
   .mdl-button.top {
