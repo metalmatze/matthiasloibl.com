@@ -1,0 +1,6 @@
+test:
+  script:
+    - pwd
+    - uname -a
+    - ls -la
+  allow_failure: true
