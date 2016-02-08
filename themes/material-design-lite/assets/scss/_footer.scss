@@ -1,6 +1,11 @@
 footer {
   background-color: white;
   position: relative;
+  text-align: center;
+
+  @media(min-width: $grid-desktop-breakpoint) {
+    text-align: left;
+  }
 
   .container {
     padding-top: 40px;
@@ -8,6 +13,7 @@ footer {
   }
 
   .legal-notice {
+    display: block;
     margin-top: 10px;
     @media(min-width: $grid-desktop-breakpoint) {
       float: right;
