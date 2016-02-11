@@ -23,6 +23,8 @@ body {
   }
 }
 
+@import "_default/list";
+@import "_default/single";
 
 @import "partials/header";
 @import "partials/footer";
@@ -36,112 +38,3 @@ body {
 @import "homepage/posts";
 @import "homepage/contact";
 
-//.hugo-mdl {
-//  .container {
-//    margin: 0 auto;
-//  }
-//
-//  @media(min-width: $grid-desktop-breakpoint) {
-//    .container {
-//      width: 70%;
-//      max-width: 1200px;
-//    }
-//
-//    .layout-single {
-//      .container {
-//        width: 700px;
-//        margin: 120px auto;
-//        text-align: justify;
-//        line-height: 1.5;
-//      }
-//    }
-//  }
-//}
-//
-//.hugo-mdl section.hero {
-//  @extend .hero-section;
-//  @extend .color-primary;
-//  display: flex;
-//  height: calc(80vh - 120px * 2);
-//  align-items: center;
-//  justify-content: center;
-//  background-size: cover;
-//  color: white;
-//
-//  h1, h2, h3, h4, h5, h6 {
-//    text-transform: uppercase;
-//    @extend .mdl-typography--font-light;
-//  }
-//}
-//
-//.hugo-mdl .layout-single {
-//  font-family: 'Roboto Slab', serif;
-//  line-height: 1.5;
-//
-//  h1, h2, h3, h4, h5, h6 {
-//    font-family: 'Roboto Slab', serif;
-//    text-transform: uppercase;
-//    @extend .mdl-typography--font-light;
-//  }
-//
-//  &, p {
-//    font-size: 16px;
-//  }
-//
-//  code {
-//    padding: 0.2em;
-//    font-family: 'Roboto Mono', monospace;
-//    font-size: 14px;
-//    background-color: unquote("rgb(#{$palette-grey-200})");
-//  }
-//
-//  pre {
-//    @extend code;
-//    padding: 16px;
-//    overflow-x: auto;
-//    code {
-//      background: none;
-//    }
-//  }
-//
-//  img {
-//    max-width: 100%;
-//  }
-//}
-//
-//.hugo-mdl .layout-list {
-//  .mdl-card {
-//    .mdl-card__title-background {
-//      height: 176px;
-//      color: white;
-//      background-position: center;
-//      background-size: cover;
-//
-//      .mdl-card__title-text {
-//        color: white;
-//      }
-//      .mdl-card__subtitle-text {
-//        color: white;
-//      }
-//    }
-//
-//    img {
-//      max-width: 100%;
-//    }
-//  }
-//}
-//
-//.youtube {
-//  position: relative;
-//  padding-bottom: 56.25%;
-//  height: 0;
-//
-//  iframe {
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    width: 100%;
-//    height: 100%;
-//  }
-//}
-//

@@ -1,0 +1,21 @@
+.layout-list {
+  .mdl-card {
+    .mdl-card__title-background {
+      height: 176px;
+      color: white;
+      background-position: center;
+      background-size: cover;
+
+      .mdl-card__title-text {
+        color: white;
+      }
+      .mdl-card__subtitle-text {
+        color: white;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
