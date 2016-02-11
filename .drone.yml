@@ -11,10 +11,12 @@ build:
     - hugo
 deploy:
   rsync:
+    when:
+      branch: master
     user: metalmatze
     host: metalmatze.de
     port: 1234
-    source: public
-    target: drone
+    source: public/*
+    target: web/matthiasloibl.com
     delete: true
     recursive: true
