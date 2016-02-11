@@ -52,4 +52,6 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('static/js'));
     gulp.src('node_modules/mobile-detect/mobile-detect.min.js')
         .pipe(gulp.dest('static/js'));
+    gulp.src('assets/js/particlesjs-config.json')
+        .pipe(gulp.dest('static/js'));
 });
