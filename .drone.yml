@@ -1,5 +1,5 @@
 build:
-  image: golang:1.5
+  image: golang:latest
   environment:
     - HUGO=0.15_linux_amd64
   commands:
