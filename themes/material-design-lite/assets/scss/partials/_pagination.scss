@@ -1,0 +1,7 @@
+.pagination {
+  padding: 0;
+
+  .mdl-button {
+    width: calc(100% - 16px * 2)
+  }
+}

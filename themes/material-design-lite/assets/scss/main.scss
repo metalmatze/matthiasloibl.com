@@ -24,15 +24,10 @@ body {
 }
 
 
-.hero {
-  @extend .color-primary;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: calc(80vh - 32px);
-}
-
-@import "footer";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/social";
+@import "partials/pagination";
 
 @import "homepage/home";
 @import "homepage/about";
@@ -40,7 +35,6 @@ body {
 @import "homepage/tweets";
 @import "homepage/posts";
 @import "homepage/contact";
-@import "social";
 
 //.hugo-mdl {
 //  .container {
