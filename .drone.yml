@@ -14,7 +14,7 @@ deploy:
     user: metalmatze
     host: metalmatze.de
     port: 1234
-    source: dist
+    source: public
     target: drone
     delete: true
     recursive: true
