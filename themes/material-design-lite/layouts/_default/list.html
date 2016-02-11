@@ -16,13 +16,13 @@
                 {{ partial "post-card.html" . }}
             </div>
             {{ end }}
+
+            <div class="mdl-cell mdl-cell--12-col">
+                {{ partial "pagination.html" $paginator }}
+            </div>
         </div>
         <div class="mdl-cell mdl-cell--4-col">
             {{ partial "post-sidebar-recent.html" . }}
-        </div>
-
-        <div class="mdl-cell mdl-cell--8-col">
-            {{ partial "pagination.html" $paginator }}
         </div>
     </div>
 </div>
