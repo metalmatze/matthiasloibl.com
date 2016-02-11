@@ -12,22 +12,6 @@
     height: 100%;
   }
 
-  h2 {
-    font-size: 24px;
-  }
-  h4 {
-    font-size: 18px;
-  }
-
-  @media(min-width: $grid-desktop-breakpoint) {
-    h2 {
-      font-size: 45px;
-    }
-    h4 {
-      font-size: 24px;
-    }
-  }
-
   .button-hireme {
     padding: 8px 16px;
     i {

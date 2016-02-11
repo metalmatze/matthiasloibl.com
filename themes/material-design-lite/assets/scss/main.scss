@@ -38,3 +38,51 @@ body {
 @import "homepage/posts";
 @import "homepage/contact";
 
+section.hero {
+  @extend .hero-section;
+  @extend .color-primary;
+  display: flex;
+  height: calc(80vh - 120px * 2);
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  color: white;
+
+  h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    @extend .mdl-typography--font-light;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  @media(min-width: $grid-tablet-breakpoint) {
+    h1 {
+      font-size: 2.5rem * 1.5;
+    }
+    h2 {
+      font-size: 2rem * 1.5;
+    }
+    h3 {
+      font-size: 1.75rem * 1.5;
+    }
+  }
+  @media(min-width: $grid-desktop-breakpoint) {
+    h1 {
+      font-size: 2.5rem * 2;
+    }
+    h2 {
+      font-size: 2rem * 2;
+    }
+    h3 {
+      font-size: 1.75rem * 2;
+    }
+  }
+}
