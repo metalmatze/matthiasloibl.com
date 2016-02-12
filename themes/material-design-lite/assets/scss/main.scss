@@ -43,6 +43,7 @@ section.hero {
   @extend .color-primary;
   display: flex;
   height: calc(80vh - 120px * 2);
+  min-height: 350px;
   align-items: center;
   justify-content: center;
   background-size: cover;
