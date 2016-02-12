@@ -10,3 +10,7 @@ This photo was taken from the top of the MAR building.
 
 ![Panorama of TU-Berlin](/posts/31/tu-pano.jpg)
 [Open image fullscreen](/posts/31/tu-pano.jpg)
+
+<small>
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)	
+</small>
