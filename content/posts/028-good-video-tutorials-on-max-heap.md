@@ -3,7 +3,7 @@ date = "2013-09-16"
 title = "Good video tutorials on Max-Heap"
 slug = "good-video-tutorials-on-max-heap"
 +++
-
+<!--more-->
 #### Introduction to a Heap , Part 1 - The Structure of Heap , How to Add an Item
 
 <div class="youtube">

@@ -6,6 +6,9 @@ slug = "aufwand-zum-brechen-einer-verschlsselung"
 
 Mein Professor Oliver Brock hat in der vorletzten Vorlesung eine sehr interessante Berechnung dargelegt, welche ich gerne teilen würde.
 
+<!--more-->
+---
+
 Es ging um den Aufwand von Programmen.
 
 [Hans-Joachim Bremermann](http://de.wikipedia.org/wiki/Hans_Joachim_Bremermann) (1926 - 1996), war ein Mathematiker und Biophysiker aus Bremen.  
@@ -25,6 +28,6 @@ Mit diesem Computer wird nun versucht verschiedene Schlüssel zu knacken:
 *  512 bit: 10<sup>72</sup> Jahre
 
 Zu der 512 bit Verschlüsselung sei noch zu sagen, dass das Universum 13,75 * 10<sup>9</sup> Jahre alt ist  
-10<sup>72</sup> Jahre um eine solche Verschlüsselung zu brechen und das mit einem Computer der so groß wie die Erde ist, finde ich sehr sehr sehr **sehr** beeindruckend.
+10<sup>72</sup> Jahre um eine solche Verschlüsselung zu brechen und das mit einem Computer der so groß wie die Erde ist, finde ich **sehr** beeindruckend.
 
 Hat jemand ungefähre Werte wie lange es bei den 3 Schlüsseln mit einem aktuellen Computer dauern würde?

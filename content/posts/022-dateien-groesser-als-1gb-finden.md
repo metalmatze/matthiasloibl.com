@@ -9,6 +9,7 @@ Soeben ist eine log-Datei im Home-Verzeichnis extrem groß geworden, so groß, d
 Um den Übeltäter zu finden habe ich nach einer Möglichkeit gegoogelt große Dateien aufzuspüren.
 
 <!--more-->
+---
 
 Folgender Befehl findet alle Dateien größer als 1GB auf der /home Partition
 

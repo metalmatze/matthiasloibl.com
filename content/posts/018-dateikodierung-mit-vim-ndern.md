@@ -7,4 +7,4 @@ slug = "dateikodierung-mit-vim-ndern"
 
 Um die Kodierung einer Datei mit vim zu ändern beim speichern einfach folgendes hinzufügen:
 
-`:write ++enc=iso-8859-1`
+	:write ++enc=iso-8859-1

@@ -6,7 +6,10 @@ slug = "bootstraps-carousel-transition-wont-animate"
 
 Twitter Bootstrap's carousel seems like a easy way to create a simple [carousel animation](http://getbootstrap.com/javascript/#carousel) on your website.
 
-![Bootstrap 3 Carousel](/post/26/carousel.png)
+<!--more-->
+---
+
+![Bootstrap 3 Carousel](/posts/26/carousel.png)
 
 Because I'm using [bower](http://bower.io) and [grunt](http://gruntjs.com) I decided to manually import bootstrap's javascript.
 
@@ -19,6 +22,9 @@ I spend almost an hour trying to figure out what was wrong in my HTML.
 There wasn't anything wrong.  
 The CSS was imported from bootstrap so it shouldn't have been the problem.
 
-While taking a look at all the available javascript files from bootstrap I saw that **there is a file called `bootstrap/js/transition.js`.**
+### Solution
+
+While taking a look at all the available javascript files from bootstrap I saw that  
+**there is a file called `bootstrap/js/transition.js`.**
 
 After concatenating this `bootstrap/js/transition.js` aswell as `bootstrap/js/carousel.js` to my javascript files, the carousel worked with the expected sliding animation.
