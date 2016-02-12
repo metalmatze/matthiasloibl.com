@@ -41,6 +41,14 @@
     }
   }
 
+  .disqus-thread {
+    margin: 32px 0;
+
+    @media(min-width: $grid-desktop-breakpoint) {
+      margin-top: 120px;
+    }
+  }
+
   .youtube {
     position: relative;
     padding-bottom: 56.25%;
