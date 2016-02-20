@@ -1,4 +1,4 @@
-baseurl = "http://hugo.metalmatze.de/"
+baseurl = "/"
 languageCode = "en-US"
 title = "matthiasloibl.com"
 theme = "material-design-lite"
