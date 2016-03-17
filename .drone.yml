@@ -1,14 +1,9 @@
 build:
   image: node:latest
-  environment:
-    - HUGO=0.15_linux_amd64
   commands:
-    - npm install -gq gulp-cli
-    - cd themes/material-design-lite && npm install -q && gulp && cd ../..
-    - curl -L -o /tmp/hugo_$HUGO.tar.gz https://github.com/spf13/hugo/releases/download/v0.15/hugo_$HUGO.tar.gz
-    - tar xvf /tmp/hugo_$HUGO.tar.gz -C /tmp/
-    - mv /tmp/hugo_$HUGO/hugo_$HUGO /usr/bin/hugo
-    - hugo
+    - make deps
+    - make
+
 deploy:
   rsync:
     when:
