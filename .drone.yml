@@ -14,7 +14,17 @@ deploy:
     when:
       branch: master
     user: metalmatze
-    host: metalmatze.de
+    host: matthiasloibl.com
+    port: 1234
+    source: public/*
+    target: web/matthiasloibl.com/matthiasloibl.com
+    delete: true
+    recursive: true
+  rsync:
+    when:
+      branch: develop
+    user: metalmatze
+    host: matthiasloibl.com
     port: 1234
     source: public/*
     target: web/matthiasloibl.com/dev.matthiasloibl.com
