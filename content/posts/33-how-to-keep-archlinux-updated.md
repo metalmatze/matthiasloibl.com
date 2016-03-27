@@ -1,6 +1,7 @@
 +++
 date = "2016-03-27T16:21:38+01:00"
 title = "How to keep archlinux updated"
+slug = "how-to-keep-archlinux-updated"
 +++
 
 You can find a complete overview of pacman in the 
