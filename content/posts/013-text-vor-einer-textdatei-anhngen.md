@@ -5,9 +5,12 @@ slug = "text-vor-einer-textdatei-anhngen"
 +++
 
 Gerade habe ich nach einer Möglichkeit gesucht den Textinhalt einer Datei vor eine andere Textdatei einzufügen.  
+<!--more-->
 Jetzt habe ich folgenden Code für mich benutzt:
 
-<pre><code>echo|cat insert.txt|cat - text.txt > /tmp/out && mv /tmp/out text.txt</code></pre>
+```bash
+echo|cat insert.txt|cat - text.txt > /tmp/out && mv /tmp/out text.txt
+```
 
 *insert.txt* - Die Textdatei mit dem Inhalt der vor die *text.txt* Datei eingefügt werden soll.  
 *text.txt* - Textdatei mit schon vorhandenem Inhalt

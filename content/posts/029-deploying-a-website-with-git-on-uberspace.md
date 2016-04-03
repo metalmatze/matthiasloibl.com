@@ -52,13 +52,15 @@ Open `hooks/post-receive` with an editor like *vim* or *nano*.
     
 Into this file we'll paste a simple bash script that will deploy the master branch into `/home/metalmatze/html/metalmatze.de`
 
-    #!/bin/bash
-    path="/home/metalmatze/html/metalmatze.de/"
+```bash
+#!/bin/bash
+path="/home/metalmatze/html/metalmatze.de/"
 
-    echo "========= GIT CHECKOUT ========="
-    GIT_WORK_TREE=$path git checkout -f master
+echo "========= GIT CHECKOUT ========="
+GIT_WORK_TREE=$path git checkout -f master
 
-    echo "============= DONE ============="
+echo "============= DONE ============="
+```
 
 Save and exit the editor.
 

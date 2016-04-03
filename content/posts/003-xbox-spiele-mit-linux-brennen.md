@@ -13,7 +13,10 @@ Weitaus schwieriger gestaltet sich jedoch das Brennen des Spieles wieder auf ein
 
 Es ist zwar kein grafisches Programm aber immerhin ein Befehl für die Bash. Also das Kommando kopiert und aus probiert:
 
-<pre><code>growisofs -use-the-force-luke=dao -use-the-force-luke=break:1913760 -dvd-compat -Z /dev/scd0=CODMW2.iso -speed=2</code></pre>  
+```bash
+growisofs -use-the-force-luke=dao -use-the-force-luke=break:1913760 -dvd-compat -Z /dev/scd0=CODMW2.iso -speed=2
+```
+
 Anpassen muss man lediglich die Option von -Z.
 /dev/scd0 war bei mir das DVD-Laufwerk und `dnl-codmw2.iso` ist das Abbild.
 
