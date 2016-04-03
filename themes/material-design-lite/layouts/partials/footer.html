@@ -15,10 +15,12 @@
 </footer>
 </main>
 </div>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
 <script src="{{.Site.BaseURL}}js/material.min.js"></script>
 <script src="{{.Site.BaseURL}}js/mobile-detect.min.js"></script>
 <script>
+    hljs.initHighlightingOnLoad();
+
     // Particles
     var md = new MobileDetect(window.navigator.userAgent);
     var particlesElem = document.querySelector("#particles")
