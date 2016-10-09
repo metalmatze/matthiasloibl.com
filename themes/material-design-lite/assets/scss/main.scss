@@ -39,7 +39,7 @@ body {
 @import "homepage/contact";
 
 section.hero {
-  @extend .hero-section;
+  // @extend .hero-section;
   @extend .color-primary;
   display: flex;
   height: calc(80vh - 120px * 2);
