@@ -1,27 +1,11 @@
-build:
-  image: node:latest
-  commands:
-    - make deps
-    - make
+pipeline:
+  build:
+    image: node:alpine
+    commands:
+      - make deps
+      - make
 
-deploy:
-  rsync:
-    when:
-      branch: master
-    user: metalmatze
-    host: matthiasloibl.com
-    port: 1234
-    source: public/*
-    target: web/matthiasloibl.com/matthiasloibl.com
-    delete: true
-    recursive: true
-  rsync:
-    when:
-      branch: develop
-    user: metalmatze
-    host: matthiasloibl.com
-    port: 1234
-    source: public/*
-    target: web/matthiasloibl.com/dev.matthiasloibl.com
-    delete: true
-    recursive: true
+  docker:
+    image: plugins/docker
+    repo: registry.matthiasloibl.com/matthiasloibl.com
+    tags: [ '${DRONE_COMMIT:0:8}' ]
