@@ -2,7 +2,7 @@ pipeline:
   build:
     image: node:alpine
     commands:
-      - apk -U add make python2
+      - apk -U add make python
       - make deps
       - make
 
