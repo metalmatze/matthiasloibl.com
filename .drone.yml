@@ -13,7 +13,7 @@ pipeline:
   telegram:
     image: appleboy/drone-telegram
     message: |
-      {{ #success build.status }}
+      {{ success build.status }}
         Success! 😊
         {{ repo.owner }}/{{ repo.name }}#{{ truncate build.sha 8 }} ({{ build.branch }}) by {{ build.author }}
       {{ else }}
