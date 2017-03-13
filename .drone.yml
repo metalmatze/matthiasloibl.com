@@ -10,13 +10,13 @@ pipeline:
     repo: registry.matthiasloibl.com/matthiasloibl.com
     tags: [ '${DRONE_COMMIT:0:8}' ]
 
-  telegram:
-    image: appleboy/drone-telegram
-    message: |
-      {{ success build.status }}
-        Success! 😊
-        {{ repo.owner }}/{{ repo.name }}#{{ truncate build.sha 8 }} ({{ build.branch }}) by {{ build.author }}
-      {{ else }}
-        Failure! 😢
-        {{ repo.owner }}/{{ repo.name }}#{{ truncate build.sha 8 }} ({{ build.branch }}) by {{ build.author }}
-      {{ /success }}
+    #  telegram:
+    #    image: appleboy/drone-telegram
+    #    message: |
+    #      {{ success build.status }}
+    #        Success! 😊
+    #        {{ repo.owner }}/{{ repo.name }}#{{ truncate build.sha 8 }} ({{ build.branch }}) by {{ build.author }}
+    #      {{ else }}
+    #        Failure! 😢
+    #        {{ repo.owner }}/{{ repo.name }}#{{ truncate build.sha 8 }} ({{ build.branch }}) by {{ build.author }}
+    #      {{ /success }}
