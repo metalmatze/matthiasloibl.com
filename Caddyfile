@@ -1,4 +1,10 @@
-0.0.0.0
-errors {
-	404 404.html
+0.0.0.0 {
+	errors {
+		404 404.html
+	}
+
+	redir 301 {
+		if {>X-Forwarded-Host} not matthiasloibl.com
+		/ https://matthiasloibl.com{uri}
+	}
 }
