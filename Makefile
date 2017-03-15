@@ -7,7 +7,7 @@ clean:
 	rm hugo
 
 deps:
-	cd themes/material-design-lite && npm install -q && cd ../..
+	cd themes/material-design-lite && yarn install && cd ../..
 	curl -L -o hugo.tar.gz https://github.com/spf13/hugo/releases/download/v0.18/hugo_0.18_Linux-64bit.tar.gz
 	tar xvf hugo.tar.gz
 	mv hugo_0.18_linux_amd64/hugo_0.18_linux_amd64 hugo

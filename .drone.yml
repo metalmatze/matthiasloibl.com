@@ -1,6 +1,6 @@
 pipeline:
   build:
-    image: node
+    image: kkarczmarczyk/node-yarn
     commands:
       - make deps
       - make
