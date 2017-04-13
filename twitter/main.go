@@ -2,10 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	"github.com/ChimeraCoder/anaconda"
-	"github.com/go-errors/errors"
 	"log"
 	"net/http"
+
+	"github.com/ChimeraCoder/anaconda"
+	"github.com/go-errors/errors"
 )
 
 func main() {
