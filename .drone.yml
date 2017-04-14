@@ -1,22 +1,26 @@
+workspace:
+  base: /go
+  path: src/git.matthiasloibl.com/metalmatze/matthiasloibl.com
+
 pipeline:
   build:
     image: kkarczmarczyk/node-yarn
     commands:
-      - make deps
-      - make
+    - make deps
+    - make
 
   docker:
     image: plugins/docker
     repo: registry.matthiasloibl.com/matthiasloibl.com
     tags: [ '${DRONE_COMMIT:0:8}' ]
 
-    #  telegram:
-    #    image: appleboy/drone-telegram
-    #    message: |
-    #      {{ success build.status }}
-    #        Success! 😊
-    #        {{ repo.owner }}/{{ repo.name }}#{{ truncate build.sha 8 }} ({{ build.branch }}) by {{ build.author }}
-    #      {{ else }}
-    #        Failure! 😢
-    #        {{ repo.owner }}/{{ repo.name }}#{{ truncate build.sha 8 }} ({{ build.branch }}) by {{ build.author }}
-    #      {{ /success }}
+  build-twitter:
+    image: golang:alpine
+    commands:
+    - cd twitter && go build -v
+
+  docker:
+    image: plugins/docker
+    repo: registry.matthiasloibl.com/twitter.matthiasloibl.com
+    Dockerfile: twitter/Dockerfile
+    tags: [ '${DRONE_COMMIT:0:8}' ]
