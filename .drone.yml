@@ -19,7 +19,7 @@ pipeline:
     commands:
     - cd twitter && go build -v
 
-  docker:
+  docker-twitter:
     image: plugins/docker
     repo: registry.matthiasloibl.com/twitter.matthiasloibl.com
     Dockerfile: twitter/Dockerfile
