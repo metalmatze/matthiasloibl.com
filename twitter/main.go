@@ -2,12 +2,14 @@ package main
 
 import (
 	"encoding/json"
-	"log"
 	"net/http"
+	"os"
 	"time"
 
 	"github.com/ChimeraCoder/anaconda"
 	"github.com/alexflint/go-arg"
+	"github.com/go-kit/kit/log"
+	"github.com/go-kit/kit/log/level"
 	"github.com/joho/godotenv"
 	cache "github.com/patrickmn/go-cache"
 )
@@ -20,6 +22,10 @@ type Config struct {
 }
 
 func main() {
+	logger := log.NewLogfmtLogger(os.Stdout)
+	logger = level.NewFilter(logger, level.AllowDebug())
+	level.Info(logger).Log("msg", "starting")
+
 	_ = godotenv.Load()
 
 	var config Config
@@ -31,29 +37,37 @@ func main() {
 	anaconda.SetConsumerSecret(config.ConsumerSecret)
 	api := anaconda.NewTwitterApi(config.AccessToken, config.AccessSecret)
 
-	twitter := Twitter{API: api, Cache: c}
+	twitter := Twitter{
+		API:    api,
+		Cache:  c,
+		Logger: logger,
+	}
 
-	http.HandleFunc("/", Handler(twitter))
+	http.HandleFunc("/", Handler(logger, twitter))
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		level.Error(logger).Log("msg", "failed to listen and serve on :8080", "err", err)
+	}
 }
 
 type Twitterer interface {
 	Tweets() ([]Tweet, error)
 }
 
-func Handler(twitter Twitterer) http.HandlerFunc {
+func Handler(logger log.Logger, twitter Twitterer) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		tweets, err := twitter.Tweets()
 		if err != nil {
-			log.Println(err)
-			http.Error(w, "failed to get tweets", http.StatusInternalServerError)
+			msg := "failed to get tweets"
+			level.Warn(logger).Log("msg", msg, "err", err)
+			http.Error(w, msg, http.StatusInternalServerError)
 			return
 		}
 		data, err := json.Marshal(tweets)
 		if err != nil {
-			log.Println(err)
-			http.Error(w, "failed to marshall tweets", http.StatusInternalServerError)
+			msg := "failed to marshall tweets"
+			level.Warn(logger).Log("msg", msg, "err", err)
+			http.Error(w, msg, http.StatusInternalServerError)
 			return
 		}
 
