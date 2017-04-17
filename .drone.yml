@@ -17,6 +17,7 @@ pipeline:
   build-twitter:
     image: golang:alpine
     commands:
+    - apk add -U git make
     - cd twitter && make build
 
   docker-twitter:
