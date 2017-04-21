@@ -1,7 +1,6 @@
 package main
 
 import (
-	"errors"
 	"time"
 
 	"github.com/ChimeraCoder/anaconda"
@@ -31,7 +30,7 @@ func (t Twitter) Tweets() ([]Tweet, error) {
 		start := time.Now()
 		timeline, err := t.API.GetUserTimeline(nil)
 		if err != nil {
-			return nil, errors.New("Can't get the users timeline")
+			return nil, err
 		}
 		level.Debug(t.Logger).Log("msg", "fetched tweets from twitter", "duration", time.Since(start))
 

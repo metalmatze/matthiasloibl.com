@@ -50,11 +50,7 @@ func main() {
 	}
 }
 
-type Twitterer interface {
-	Tweets() ([]Tweet, error)
-}
-
-func Handler(logger log.Logger, twitter Twitterer) http.HandlerFunc {
+func Handler(logger log.Logger, twitter Twitter) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		tweets, err := twitter.Tweets()
 		if err != nil {
