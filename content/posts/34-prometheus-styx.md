@@ -10,6 +10,11 @@ A simple tool for exporting data from Prometheus to CSV, gnuplot & matplotlib.
 
 <!--more-->
 
+## Video
+
+<div class="youtube">
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ovJDD9UOxLc?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## Slides
 
