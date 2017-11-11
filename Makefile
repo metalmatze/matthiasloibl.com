@@ -8,10 +8,11 @@ clean:
 
 deps:
 	cd themes/material-design-lite && yarn install && cd ../..
-	curl -L -o hugo.tar.gz https://github.com/spf13/hugo/releases/download/v0.20.1/hugo_0.20.1_Linux-64bit.tar.gz
-	tar xvf hugo.tar.gz
-	mv hugo_0.20.1_linux_amd64/hugo_0.20.1_linux_amd64 hugo
-	rm -rf hugo_0.20.1_linux_amd64 hugo.tar.gz
+	rm -rf hugo hugo_tmp/ hugo.tar.gz
+	curl -L -o hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v0.30.2/hugo_0.30.2_Linux-64bit.tar.gz
+	mkdir hugo_tmp && tar xvf hugo.tar.gz -C hugo_tmp/
+	mv hugo_tmp/hugo hugo
+	rm -rf hugo_tmp/ hugo.tar.gz
 
 build:
 	cd themes/material-design-lite && node_modules/.bin/gulp && cd ../..
