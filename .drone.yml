@@ -21,6 +21,7 @@ pipeline:
     group: docker
     image: plugins/docker
     repo: registry.matthiasloibl.com/matthiasloibl.com
+    registry: registry.matthiasloibl.com
     tags: [ '${DRONE_COMMIT:0:8}' ]
     secrets: [ 'docker_username', 'docker_password' ]
 
@@ -28,6 +29,7 @@ pipeline:
     group: docker
     image: plugins/docker
     repo: registry.matthiasloibl.com/twitter.matthiasloibl.com
-    Dockerfile: twitter/Dockerfile
+    registry: registry.matthiasloibl.com
+    dockerfile: twitter/Dockerfile
     tags: [ '${DRONE_COMMIT:0:8}' ]
     secrets: [ 'docker_username', 'docker_password' ]
