@@ -4,24 +4,30 @@ workspace:
 
 pipeline:
   build:
-    image: kkarczmarczyk/node-yarn
+    group: build
+    image: node:10
     commands:
     - make deps
     - make
 
   docker:
+    group: docker
     image: plugins/docker
     repo: registry.matthiasloibl.com/matthiasloibl.com
     tags: [ '${DRONE_COMMIT:0:8}' ]
+    secrets: [ 'docker_username', 'docker_password' ]
 
   build-twitter:
+    group: build
     image: golang:alpine
     commands:
     - apk add -U git make
     - cd twitter && make build
 
   docker-twitter:
+    group: docker
     image: plugins/docker
     repo: registry.matthiasloibl.com/twitter.matthiasloibl.com
     Dockerfile: twitter/Dockerfile
     tags: [ '${DRONE_COMMIT:0:8}' ]
+    secrets: [ 'docker_username', 'docker_password' ]
