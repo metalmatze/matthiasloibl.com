@@ -10,19 +10,19 @@ pipeline:
     - make deps
     - make
 
+  build-twitter:
+    group: build
+    image: golang:1.10-alpine
+    commands:
+    - apk add -U git make
+    - cd twitter && make build
+
   docker:
     group: docker
     image: plugins/docker
     repo: registry.matthiasloibl.com/matthiasloibl.com
     tags: [ '${DRONE_COMMIT:0:8}' ]
     secrets: [ 'docker_username', 'docker_password' ]
-
-  build-twitter:
-    group: build
-    image: golang:alpine
-    commands:
-    - apk add -U git make
-    - cd twitter && make build
 
   docker-twitter:
     group: docker
