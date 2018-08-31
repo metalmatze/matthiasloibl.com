@@ -43,14 +43,14 @@ func main() {
 		Logger: logger,
 	}
 
-	http.HandleFunc("/", Handler(logger, twitter))
+	http.HandleFunc("/", handler(logger, twitter))
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		level.Error(logger).Log("msg", "failed to listen and serve on :8080", "err", err)
 	}
 }
 
-func Handler(logger log.Logger, twitter Twitter) http.HandlerFunc {
+func handler(logger log.Logger, twitter Twitter) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		tweets, err := twitter.Tweets()
 		if err != nil {
