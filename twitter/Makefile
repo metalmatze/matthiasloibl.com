@@ -35,19 +35,6 @@ lint:
 test:
 	@for PKG in $(PACKAGES); do go test -cover -coverprofile $$GOPATH/src/$$PKG/coverage.out $$PKG || exit 1; done;
 
-twitter: $(wildcard *.go)
-	$(GO) build -v -ldflags '-w $(LDFLAGS)'
-
 .PHONY: build
-build: twitter
-
-.PHONY: install
-install:
-	$(GO) install -v -ldflags '-w $(LDFLAGS)'
-
-.PHONY: release
-release:
-	@which gox > /dev/null; if [ $$? -ne 0 ]; then \
-		$(GO) get -u github.com/mitchellh/gox; \
-	fi
-	CGO_ENABLED=0 gox -verbose -ldflags '-w $(LDFLAGS)' -output="dist/twitter-${DRONE_TAG}-{{.OS}}-{{.Arch}}"
+build: $(wildcard *.go)
+	$(GO) build -v -ldflags '-w $(LDFLAGS)'
