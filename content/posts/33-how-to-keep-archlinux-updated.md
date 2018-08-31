@@ -1,6 +1,6 @@
 +++
 date = "2016-03-27T16:21:38+01:00"
-title = "How to keep archlinux updated"
+title = "How to keep Arch Linux updated"
 slug = "how-to-keep-archlinux-updated"
 cover = "posts/33/archey.png"
 +++
