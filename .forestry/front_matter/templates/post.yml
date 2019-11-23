@@ -14,3 +14,5 @@ fields:
 - type: file
   name: cover
   label: cover
+pages:
+- content/posts/talk-shipping-metrics-from-the-edge.md
