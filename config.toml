@@ -1,4 +1,23 @@
 baseurl = "/"
 languageCode = "en-US"
 title = "matthiasloibl.com"
-theme = "material-design-lite"
+theme = "hello-friend"
+
+[languages]
+  [languages.en]
+    title = "matthiasloibl.com"
+    subtitle = "Website and Blog"
+
+    [languages.en.params.logo]
+      logoText = "matthiasloibl.com"
+      logoHomeLink = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "tweets"
+        name = "Tweets"
+        url = "https://twitter.com/metalmatze"

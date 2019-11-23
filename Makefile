@@ -23,4 +23,4 @@ gulp:
 
 .PHONY: build
 build:
-	./hugo
+	hugo
