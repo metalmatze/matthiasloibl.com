@@ -7,7 +7,7 @@ title = "Talk: Shipping Metrics from the Edge"
 
 +++
 In November 2019 KubeCon North America took place in San Diego's Convention Center.  
-I attended the conference and gave this talk on Wednesday noon.
+I attended the conference and gave this talk on Wednesday.
 
 <!--more-->
 
