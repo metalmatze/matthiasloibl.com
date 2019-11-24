@@ -1,34 +1,17 @@
 workspace:
   base: /go
-  path: src/git.matthiasloibl.com/metalmatze/matthiasloibl.com
+  path: src/github.com/metalmatze/matthiasloibl.com
 
 pipeline:
   build:
-    group: build
-    image: node:10
+    image: alpine
     commands:
-    - make npm hugo gulp build
-
-  build-twitter:
-    group: build
-    image: golang:1.10-alpine
-    commands:
-    - apk add -U git make
-    - cd twitter && make build
+    - apk add git make
+    - make hugo build
 
   docker:
-    group: docker
     image: plugins/docker
-    repo: registry.matthiasloibl.com/matthiasloibl.com
-    registry: registry.matthiasloibl.com
-    tags: [ '${DRONE_COMMIT:0:8}' ]
-    secrets: [ 'docker_username', 'docker_password' ]
-
-  docker-twitter:
-    group: docker
-    image: plugins/docker
-    repo: registry.matthiasloibl.com/twitter.matthiasloibl.com
-    registry: registry.matthiasloibl.com
-    dockerfile: twitter/Dockerfile
+    repo: quay.io/metalmatze/matthiasloibl.com
+    registry: quay.io/metalmatze/matthiasloibl.com
     tags: [ '${DRONE_COMMIT:0:8}' ]
     secrets: [ 'docker_username', 'docker_password' ]
