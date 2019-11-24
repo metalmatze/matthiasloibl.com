@@ -29,4 +29,4 @@ You can find my Slides over at [Speakerdeck](https://speakerdeck.com/metalmatze/
 
 ### Code
 
-The source code / configuration used to deploy both the kube-prometheus stack to a Raspberry Pi 4 as well as the  
+The source code / configuration used to deploy both the kube-prometheus stack to a Raspberry Pi 4 as well as the  Kubernetes deployments can be found in my [talk repository](https://github.com/metalmatze/talks/tree/master/2019-11%20-%20KubeCon%20NA).
