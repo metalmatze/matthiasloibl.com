@@ -11,7 +11,7 @@ steps:
   image: alpine
   commands:
   - apk add git
-  - git pull --recurse-submodules
+  - git submodule update --recursive --remote
 
 - name: build
   image: alpine
