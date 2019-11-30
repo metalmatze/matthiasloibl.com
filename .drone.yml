@@ -22,7 +22,8 @@ steps:
 - name: docker
   image: plugins/docker
   settings:
-    username: metalmatze
+    username:
+      from_secret: quay_username
     password:
       from_secret: quay_password
     registry: quay.io
