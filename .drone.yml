@@ -8,9 +8,10 @@ platform:
 
 steps:
 - name: submodules
-  image: alpine/git
+  image: alpine
   commands:
-  - git submodule update --recursive --remote
+  - make git
+  - git pull --recurse-submodules
 
 - name: build
   image: alpine
