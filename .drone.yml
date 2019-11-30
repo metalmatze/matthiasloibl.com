@@ -11,7 +11,7 @@ steps:
   image: alpine
   commands:
   - apk add git
-  - git submodule update --recursive --remote
+  - git submodule update --recursive themes/hello-friend
 
 - name: build
   image: alpine
