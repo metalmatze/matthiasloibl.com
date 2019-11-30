@@ -1,17 +1,21 @@
-workspace:
-  base: /go
-  path: src/github.com/metalmatze/matthiasloibl.com
+---
+kind: pipeline
+name: matthiasloibl.com
 
-pipeline:
-  build:
-    image: alpine
-    commands:
-    - apk add git make
-    - make hugo build
+platform:
+  os: linux
+  arch: amd64
 
-  docker:
-    image: plugins/docker
-    repo: quay.io/metalmatze/matthiasloibl.com
-    registry: quay.io/metalmatze/matthiasloibl.com
-    tags: [ '${DRONE_COMMIT:0:8}' ]
-    secrets: [ 'docker_username', 'docker_password' ]
+steps:
+- name: build
+  image: alpine
+  commands:
+  - apk add git make
+  - make hugo build
+
+# - docker:
+#   image: plugins/docker
+#   repo: quay.io/metalmatze/matthiasloibl.com
+#   registry: quay.io/metalmatze/matthiasloibl.com
+#   tags: [ '${DRONE_COMMIT:0:8}' ]
+#   secrets: [ 'docker_username', 'docker_password' ]
