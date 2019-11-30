@@ -19,9 +19,18 @@ steps:
   - apk add curl git make
   - make hugo build
 
-# - docker:
-#   image: plugins/docker
-#   repo: quay.io/metalmatze/matthiasloibl.com
-#   registry: quay.io/metalmatze/matthiasloibl.com
-#   tags: [ '${DRONE_COMMIT:0:8}' ]
-#   secrets: [ 'docker_username', 'docker_password' ]
+- name: docker
+  image: plugins/docker
+  settings:
+    username: metalmatze
+    password:
+      from_secret: quay_password
+    registry: quay.io
+    repo: quay.io/metalmatze/matthiasloibl.com
+    tags:
+      - ${DRONE_COMMIT_SHA:0:7}
+  when:
+    branch:
+    - master
+    event:
+    - push
