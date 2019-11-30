@@ -10,7 +10,7 @@ steps:
 - name: build
   image: alpine
   commands:
-  - apk add git make
+  - apk add curl git make
   - make hugo build
 
 # - docker:
