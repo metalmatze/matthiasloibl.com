@@ -10,7 +10,7 @@ steps:
 - name: submodules
   image: alpine
   commands:
-  - make git
+  - apk add git
   - git pull --recurse-submodules
 
 - name: build
