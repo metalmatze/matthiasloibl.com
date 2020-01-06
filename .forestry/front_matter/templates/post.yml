@@ -16,3 +16,4 @@ fields:
   label: cover
 pages:
 - content/posts/talk-shipping-metrics-from-the-edge.md
+- content/posts/unlock-pin-on-yubikey-with-gpg.md
