@@ -15,5 +15,6 @@ fields:
   name: cover
   label: cover
 pages:
+- content/posts/benchmarking-my-computers-by-compiling-thanos.md
 - content/posts/talk-shipping-metrics-from-the-edge.md
 - content/posts/unlock-pin-on-yubikey-with-gpg.md
