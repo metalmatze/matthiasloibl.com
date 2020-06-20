@@ -1,7 +1,6 @@
 +++
 cover = ""
 date = 2020-06-20T22:00:00Z
-draft = true
 slug = "compiling-thanos-to-benchmark-my-computers"
 title = "Compiling Thanos to Benchmark my Computers"
 
@@ -123,6 +122,8 @@ Average: **9.418 seconds**
 This benchmark is far from being scientific, but tasks like these (compiling) are pretty much what I do every day, so I care a lot of the new hardware improved here. :)
 
 Going **from 70s to 9s** is really significant and impressive. Although Go has an amazing cache for the build system, I'm pretty I'll notice the difference here and there every day going foward.
+
+As for the ThinkPad, I'm super happy with it as a laptop, but my desktop is finally a lot more powerful again!
 
 ***
 
