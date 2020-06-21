@@ -19,7 +19,7 @@ Thus, it was time to get a new CPU (AMD Ryzen 9 3900X 12x 3.80GHz) and SSD (Sams
 I'm running these "benchmarks" on the [current master branch of Thanos](https://github.com/thanos-io/thanos/commit/02ab6b84908e5458699655ab064a78afc0f9da9b):  
 `git checkout 02ab6b84908e5458699655ab064a78afc0f9da9b`
 
-Each machines had the latest version of Go (1.14) installed.
+Each machine had the latest version of Go (1.14) installed.
 
 To disable the Go build cache we run `go clean -cache` before each run.
 
@@ -120,7 +120,7 @@ Average: **9.418 seconds**
 
 This benchmark is far from being scientific, but tasks like these (compiling) are pretty much what I do every day, so I care a lot of the new hardware improved here. :)
 
-Going **from 70s to 9s** is really significant and impressive. Although Go has an amazing cache for the build system, I'm pretty I'll notice the difference here and there every day going foward.
+Going **from 70s to 9s** is really significant and impressive. Although Go has an amazing cache for the build system, I'm pretty sure I'll notice the difference here and there every day going foward.
 
 As for the ThinkPad, I'm super happy with it as a laptop, but my desktop is finally a lot more powerful again!
 
