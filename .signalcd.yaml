@@ -1,0 +1,6 @@
+name: matthiasloibl.com:${DRONE_COMMIT_SHA:0:7}
+steps:
+  - name: image
+    image: bitnami/kubectl
+    commands:
+      - kubectl set image deployment -n default matthiasloibl matthiasloibl=quay.io/metalmatze/matthiasloibl.com:${DRONE_COMMIT_SHA:0:7}
