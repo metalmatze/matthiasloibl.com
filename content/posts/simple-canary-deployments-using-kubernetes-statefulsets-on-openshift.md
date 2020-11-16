@@ -24,7 +24,7 @@ Let’s walk you through how I added Canary Deployments in a bit more depth.
 
 The Kubernetes documentation has a wonderful section that showcases how to go about creating [Canary Deployments with Kubernetes Deployments](https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#canary-deployments). This was the main inspiration for accomplishing the same result with StatefulSets.
 
-```jsonnet
+```yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
