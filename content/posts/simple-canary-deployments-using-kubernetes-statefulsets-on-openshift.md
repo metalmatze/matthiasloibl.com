@@ -1,7 +1,6 @@
 +++
 cover = "/posts/screenshot-from-2020-08-07-20-16-40.png"
 date = 2020-09-22T22:00:00Z
-draft = true
 slug = ""
 title = "Simple Canary Deployments using Kubernetes StatefulSets on OpenShift"
 
