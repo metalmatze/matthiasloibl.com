@@ -19,3 +19,4 @@ pages:
 - content/posts/simple-canary-deployments-using-kubernetes-statefulsets-on-openshift.md
 - content/posts/talk-shipping-metrics-from-the-edge.md
 - content/posts/unlock-pin-on-yubikey-with-gpg.md
+- content/talk-thanos-cheap-simple-and-scalable-prometheus.md
