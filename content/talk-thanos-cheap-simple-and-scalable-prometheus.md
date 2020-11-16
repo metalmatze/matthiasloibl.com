@@ -3,7 +3,7 @@ cover = ""
 date = 2020-08-19T12:30:00Z
 draft = true
 slug = ""
-title = "Talk: Thanos - Cheap, Simple and Scalable Prometheus"
+title = "Talk @ KubeCon EU 2020: Thanos - Cheap, Simple and Scalable Prometheus"
 
 +++
 ### Description
