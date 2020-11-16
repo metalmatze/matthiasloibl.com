@@ -6,6 +6,8 @@ slug = ""
 title = "Simple Canary Deployments using Kubernetes StatefulSets on OpenShift"
 
 +++
+> This blog post was originally posted on the [OpenShift blog](https://www.openshift.com/blog/simple-canary-deployments-using-kubernetes-statefulsets-on-openshift). This is just a personal mirror of that blog post I wrote.
+
 In this blog post I want to introduce a nice little trick to make canary deployments possible only with Kubernetes StatefulSets and Services. First, let me give a bit of background on why I went down that route. At Red Hat we continuously increase the number of applications we run ourselves. The Red Hat OpenShift Monitoring and Observability Teams are responsible for running a service called Telemeter. We use this service to get some basic telemetry of OpenShift clusters for Remote Health Monitoring.
 
 In a previous version of Telemeter, the system ingested all the data into an in-memory hashring, which was scraped by two [Prometheus](https://prometheus.io/) replicas. This setup allowed us to quickly get started on providing basic telemetry functionality for OpenShift but we soon identified a major bottleneck. Even though the hashring was able to handle more requests easily, the two Prometheus instances still scraped all of the data. We needed something more scalable to replace the Prometheus instances with.
