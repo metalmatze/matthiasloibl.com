@@ -143,7 +143,6 @@ If something changes in the original StatefulSet, the exact same change will pro
 We use the [Prometheus Operator](https://github.com/prometheus-operator/prometheus-operator) to manage and configure all of the Prometheus instances that scrape our services. Therefore, we have a ServiceMonitor, that is a custom Kubernetes object that configures Prometheus, to scrape Telemeter too:
 
 ```yaml
-
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
