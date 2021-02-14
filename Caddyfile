@@ -1,10 +1,14 @@
-0.0.0.0 {
-	errors {
-		404 404.html
-	}
-
-	redir 301 {
-		if {>X-Forwarded-Host} not matthiasloibl.com
-		/ https://matthiasloibl.com{uri}
-	}
+{
+	auto_https off
 }
+
+:80
+root * /var/www/html
+file_server
+
+handle_errors {
+	rewrite * /{http.error.status_code}.html
+	file_server
+}
+
+redir https://matthiasloibl.com{uri} permanent

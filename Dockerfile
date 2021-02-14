@@ -1,6 +1,6 @@
-FROM abiosoft/caddy
+FROM caddy:2-alpine
+WORKDIR /var/www/html
+COPY ./Caddyfile /etc/caddy/Caddyfile
+COPY ./public/ /var/www/html
 
-COPY Caddyfile /etc/Caddyfile
-COPY public/ /srv
-
-EXPOSE 2015
+EXPOSE 80
