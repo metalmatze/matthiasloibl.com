@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - uses: textbook/git-checkout-submodule-action@master
+      with:
+        remote: true
     - uses: jakejarvis/hugo-build-action@v0.80.0
       with:
         args: --minify
