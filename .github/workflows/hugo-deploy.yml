@@ -1,0 +1,15 @@
+name: hugo-deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: jakejarvis/hugo-build-action@v0.80.0
+      with:
+        args: --minify
